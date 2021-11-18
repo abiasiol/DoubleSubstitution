@@ -281,9 +281,8 @@ def perform_double_substitution(file):
     indices = dv.read_indices(lines)
 
     # Read dvw file and get teams list
-    df_aux = read_dvw_file(file, indices['scout'][0])
+    df_aux = dv.read_dvw_file(file, indices['scout'][0])
     players_int, players_osp = dv.get_players(file, indices)
-
 
     df_copy = df_aux.copy()
     df_copy = df_copy.assign(timecode=pd.to_timedelta(df_copy.secondipass, unit='s'))

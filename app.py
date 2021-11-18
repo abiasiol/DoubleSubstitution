@@ -122,7 +122,7 @@ def parse_contents(contents, filename, date):
                                  names=['timecode', 'code', 'rally', 'notes', 'team'])
             df_log = df_log.sort_values(by='timecode', ascending=True)
 
-            return html.Div(['Done!']), df_log.to_dict('records'), dict(content=file_out.getvalue(),
+            return html.Div(['😃']), df_log.to_dict('records'), dict(content=file_out.getvalue(),
                                                                         filename=f'{filename[:-4]}_new.dvw')
         else:
             return html.Div(['Nononono']), pd.DataFrame(columns=['timecode', 'code', 'rally', 'notes', 'team']).to_dict(
@@ -156,16 +156,6 @@ def update_output(content, name, date):
 def send_file_out(data):
     if data:
         return data
-
-
-# @app.callback(
-#     Output("download-text", "data"),
-#     Input("btn-download-txt", "n_clicks"),
-#     prevent_initial_call=True,
-# )
-# def func(n_clicks):
-#     return dict(content="Hello world!", filename="hello.txt")
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
