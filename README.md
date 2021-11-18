@@ -4,7 +4,7 @@ This is an app developed with [**Dash**](https://dash.plotly.com/) and deployed 
 
 The app performs ***rotation swaps*** when incorrect double substitution are detected.
 
-Link to the app: https://andrea-dvw-2xfix.herokuapp.com/
+**Link to the app: https://andrea-dvw-2xfix.herokuapp.com/**
 
 ## How to use the DoubleSubstitution app
 
